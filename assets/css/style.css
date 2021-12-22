@@ -1,0 +1,39 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+/* Header */
+
+header {
+    color: #fff;
+}
+
+#slide1 {
+    background-image: url("../images/deadlift.jpg");
+}
+
+#slide2 {
+    background-image: url("../images/pexels-photo-7690215.jpeg");
+}
+
+#slide-random {
+    background-image: url("../images/swing.jpeg");
+}
+
+#slide-timer {
+    background-image: url("../images/pexels-photo-110471.jpeg");
+}
+.slide {
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.slide {
+    display: inline-block;
+    margin: 0 auto;
+}
