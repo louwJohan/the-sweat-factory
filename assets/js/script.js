@@ -15,7 +15,7 @@ let intermediate = [["The Good the Bad and the Ugly","For Time", "200 Double-Und
 function createList (arr) {
         let exTable = "<ol>";
         for (let i = 0 ; i < arr.length; i++){
-            let listItem = `<li id="list-item${i+1}">${arr[i][0]}</li>`;
+            let listItem = `<li id="list-item${i+1}"><button>${arr[i][0]}</button></li>`;
             exTable += listItem
         }
         exTable + "</ol>";
