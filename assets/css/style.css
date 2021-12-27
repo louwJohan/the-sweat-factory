@@ -2,14 +2,16 @@ body {
     padding: 0;
     margin: 0;
     background-color: #fff;
-    height: 1200px;
-    position: relative;
+    flex-direction: column;
 }
 
 /* Header */
 
 header {
+    height: 150px;
     color: black;
+    line-height: 100px;
+    text-align: center;
 }
  
 /* Slides */
@@ -44,15 +46,21 @@ header {
     background-image: url("../images/pexels-photo-110471.jpeg");
 }
 
+.slide button {
+    background: transparent;
+    border: 1px solid white;
+    color:white;
+    width: 250px;
+    height: 75px;
+    font-size: 200%;
+    border-radius: 10px;
+}
+
 /* Footer */
 
-.footer {
+.footer{
     height: 100px;
     width: 100%;
-    background-color: #fff;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    
+    background-color: black;
+    margin-top: auto;
 }
