@@ -24,13 +24,20 @@ let advanced = [["THE GOOD THE BAD AND THE UGLY","For Time", "200 Double-Unders"
 function createList (arr) {
         let exTable = `<h3>Choose an exercise routine!</h3> <ol>`;
         for (let i = 0 ; i < arr.length; i++){
-            let listItem = `<li><button id="list-item${i+1}">${arr[i][0]}</button></li>`;
-            exTable += listItem
+            if (arr === advanced){
+                let listItem = `<li><button class="advanced" id="list-item${i+1}">${arr[i][0]}</button></li>`;
+                exTable += listItem
+            } else {
+                let listItem = `<li><button class="beginner" id="list-item${i+1}">${arr[i][0]}</button></li>`;
+                exTable += listItem
+            }
+            
         }
         exTable + `</ol>`;
         return exTable;
 }
 
+console.log(createList(advanced))
 //Function HTML syntax created from an  array and inserts into DOM //
 
 function displayList(arr){
@@ -58,13 +65,18 @@ function displayChosenEx(arr,num){
 
 
 
-
+// event listeners to display list of exercises //
 advancedButton.addEventListener("click", function(){displayList(advanced)});
 beginnerButton.addEventListener("click", function(){displayList(beginner)});
 
+
+// Add event listener to help display the exercise routine //
+
 document.addEventListener('click', event => {
-    if (event.target.matches("#list-item1") ){
+    if (event.target.matches("#list-item1" && ".advanced") ){
         displayChosenEx(advanced,0);
+    } else if (event.target.matches("#list-item2")) {
+        displayChosenEx(advanced,1);
     }
     
   })
