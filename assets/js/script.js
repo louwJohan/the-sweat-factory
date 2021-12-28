@@ -16,18 +16,18 @@ let advanced = [["THE GOOD THE BAD AND THE UGLY","For Time", "200 Double-Unders"
 ["MOUNT KILIMANJARO", "For Time", "800 meter Run", "40 Box Step-Ups (30/24 in)", "600 meter Run", "30 Box Jump Overs (30/24 in)", "400 meter Run", "20 Box Step-Ups (30/24 in)", "200 meter Run", "10 Box Jump Overs (30/24 in)", "With a running clock, complete the prescribed work in the order written as fast as possible (“For Time“). "], ["ANTIPOLIS HOME WOD 46", "4 Rounds for Time", "10 Plank Rows (50/35 lb, each side)", "10 Skull Crushers (50/35 lb)",
 "10 Bulgarian Split Squats", "10 Single-Leg Romanian Deadlifts (50/35 lb)", "With a running clock, complete 4 rounds of the prescribed work in the order written."]]
  let beginner = [["Run for your life"]]
- let advancedButton = document.getElementById("slide1-button");
- let beginnerButton = document.getElementById("slide2-button");
- //let listButton1 = document.getElementById("list-item1");
-// function to create HTML syntax for a list from an array//
+ let advancedButton = document.getElementById("slide2-button");
+ let beginnerButton = document.getElementById("slide1-button");
+
+ // function to create HTML syntax for a list from an array//
 
 function createList (arr) {
-        let exTable = "<h3>Choose an exercise routine!</h3> <ol>";
+        let exTable = `<h3>Choose an exercise routine!</h3> <ol>`;
         for (let i = 0 ; i < arr.length; i++){
-            let listItem = `<li id="list-item${i+1}"><button>${arr[i][0]}</button></li>`;
+            let listItem = `<li><button id="list-item${i+1}">${arr[i][0]}</button></li>`;
             exTable += listItem
         }
-        exTable + "</ol>";
+        exTable + `</ol>`;
         return exTable;
 }
 
@@ -61,12 +61,10 @@ function displayChosenEx(arr,num){
 
 advancedButton.addEventListener("click", function(){displayList(advanced)});
 beginnerButton.addEventListener("click", function(){displayList(beginner)});
-//listButton1.addEventListener("click", function(){displayChosenEx(advanced,0)});//
 
 document.addEventListener('click', event => {
-    if(event.target.matches("#list-item1")){
-      console.log("you are logged in :)");  
-    } else {
-        console.log('Hoekom')
+    if (event.target.matches("#list-item1") ){
+        displayChosenEx(advanced,0);
     }
+    
   })
