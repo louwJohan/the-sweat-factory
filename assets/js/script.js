@@ -139,3 +139,97 @@ document.addEventListener("click", event => {
     }
 })
 
+// Stopwatch and countdown timer //
+
+// Add function to timer button//
+
+ function timerDisplay(){
+    let timerChoice= `<h3>Do you want a Stopwatch or Countdown Timer</h3><button id="stopwatch">Stopwatch</button><button id="timer">Countdown Timer</button>`;
+    document.getElementById("timer").innerHTML = timerChoice;
+   }
+
+   timerButton.addEventListener("click", function(){timerDisplay()});
+
+   document.addEventListener("click", event => {
+      if(event.target.matches("#stopwatch")){
+         // Add code for stopwatch//
+         let stopwatchDisplay = `<div id="stopwatch">
+         00:00:00
+     </div>
+
+     <ul id="stopwatch-buttons">
+         <li><button id="stopwatch-start">Start</button></li>
+         <li><button id="stopwatch-stop">Stop</button></li>
+         <li><button id="stopwatch-reset">Reset</button></li>
+     </ul>`
+         document.getElementById("timer").innerHTML = stopwatchDisplay;
+      } else if (event.target.matches("#timer")){
+         // add code for countdown timer//
+      }
+   })
+
+   // Stopwatch function // 
+
+document.addEventListener("click", event => {
+   if (event.target.matches("#stopwatch-start")){
+      startStopwatch();
+   }
+})
+
+let timer = document.getElementById('stopwatch');
+
+let hr = 0;
+let min = 0;
+let sec = 0;
+let stoptime = true;
+
+function startStopwatch() {
+  if (stoptime == true) {
+        stoptime = false;
+        timerCycle();
+    }
+}
+
+function stopStopwatch() {
+  if (stoptime == false) {
+    stoptime = true;
+  }
+}
+
+function stopwatchCycle() {
+    if (stoptime == false) {
+    sec = parseInt(sec);
+    min = parseInt(min);
+    hr = parseInt(hr);
+
+    sec = sec + 1;
+
+    if (sec == 60) {
+      min = min + 1;
+      sec = 0;
+    }
+    if (min == 60) {
+      hr = hr + 1;
+      min = 0;
+      sec = 0;
+    }
+
+    if (sec < 10 || sec == 0) {
+      sec = '0' + sec;
+    }
+    if (min < 10 || min == 0) {
+      min = '0' + min;
+    }
+    if (hr < 10 || hr == 0) {
+      hr = '0' + hr;
+    }
+
+    timer.innerHTML = hr + ':' + min + ':' + sec;
+
+    setTimeout("stopwatchCycle()", 1000);
+  }
+}
+
+function resetStopwatch() {
+    timer.innerHTML = '00:00:00';
+}
