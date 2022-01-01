@@ -123,7 +123,7 @@ function randomChoice (){
 
     // add html with two buttons to choose between beginner and advanced//
 
-    let chooseLevel =`<h3>Do you want a Beginner or Advanced workout?</h3><button id="random-beginner">Beginner</button><button id="random-advanced">Advanced</button>`;
+    let chooseLevel =`<h3>Do you want a Beginner or Advanced workout?</h3> <button id="random-beginner" class="random-btn">Beginner</button> <button id="random-advanced" class="random-btn">Advanced</button>`;
     document.getElementById("display-exercise").innerHTML = chooseLevel;
 }
 
