@@ -26,7 +26,7 @@ header {
 
 .slide {
     height: 300px;
-    width: 300px
+    width: 300px;
 }
 
 #slide1 {
@@ -42,9 +42,6 @@ header {
     background-image: url("../images/swing.jpeg");
 }
 
-#slide-timer {
-    background-image: url("../images/pexels-photo-110471.jpeg");
-}
 
 .slide button {
     background: transparent;
@@ -55,7 +52,33 @@ header {
     font-size: 200%;
     border-radius: 10px;
 }
+/*Display exercises*/
 
+#display-exercise {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.exercise-list{
+    list-style: none;
+}
+
+/* Stopwatch*/
+
+#stopwatch {
+    width:100%;
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 400%;
+    font-weight: bold;
+}
+
+#stopwatch-buttons {
+    list-style: none;
+    display: inline;
+}
 /* Footer */
 
 .footer{

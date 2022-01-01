@@ -25,7 +25,7 @@ let timerButton = document.getElementById("timer-button")
  // function to create HTML syntax for a list from an array//
 
 function createList (arr) {
-        let exTable = `<h3>Choose an exercise routine!</h3> <ol>`;
+        let exTable = `<h3>Choose an exercise routine!</h3> <ol class="exercise-list">`;
         for (let i = 0 ; i < arr.length; i++){
             if (arr === advanced){
                 let listItem = `<li><button id="adlist-item${i+1}">${arr[i][0]}</button></li>`;
@@ -50,7 +50,7 @@ function displayList(arr){
 
 // Create a list of the chosen exercise//
 function createExerciseList (arr,num){
-    let exerciseListTable = `<h3>You have Chosen ${arr[num][0]}! Good luck!</h3> <ol class="exerciseListTable">`;
+    let exerciseListTable = `<h3>You have Chosen ${arr[num][0]}! Good luck!</h3> <ol class="exercise-list">`;
         for (let i = 1 ; i < arr[num].length; i++){
             let listItem = `<li >${arr[num][i]}</li>`;
             exerciseListTable += listItem
@@ -141,95 +141,50 @@ document.addEventListener("click", event => {
 
 // Stopwatch and countdown timer //
 
-// Add function to timer button//
+// Stopwatch function // 
+let appendSeconds = document.getElementById("seconds")
+let appendMinutes = document.getElementById("minutes");
+let seconds = 0;
+let min = 0;
+let interval;
+let stopwatchStart = document.getElementById("stopwatch-start");
+let stopwatchStop = document.getElementById("stopwatch-stop");
+let stopwatchReset = document.getElementById("stopwatch-reset");
 
- function timerDisplay(){
-    let timerChoice= `<h3>Do you want a Stopwatch or Countdown Timer</h3><button id="stopwatch">Stopwatch</button><button id="timer">Countdown Timer</button>`;
-    document.getElementById("timer").innerHTML = timerChoice;
+function start(){
+   seconds++;
+   if (seconds < 9){
+         appendSeconds.innerHTML = "0" + seconds;
    }
 
-   timerButton.addEventListener("click", function(){timerDisplay()});
-
-   document.addEventListener("click", event => {
-      if(event.target.matches("#stopwatch")){
-         // Add code for stopwatch//
-         let stopwatchDisplay = `<div id="stopwatch">
-         00:00:00
-     </div>
-
-     <ul id="stopwatch-buttons">
-         <li><button id="stopwatch-start">Start</button></li>
-         <li><button id="stopwatch-stop">Stop</button></li>
-         <li><button id="stopwatch-reset">Reset</button></li>
-     </ul>`
-         document.getElementById("timer").innerHTML = stopwatchDisplay;
-      } else if (event.target.matches("#timer")){
-         // add code for countdown timer//
+   if (seconds > 9){
+      appendSeconds.innerHTML = seconds;
       }
-   })
 
-   // Stopwatch function // 
+   if(seconds> 59){
+      min++;
+      appendMinutes.innerHTML = "0" + min;
+      seconds = 0;
+      appendSeconds.innerHTML = "0" + 0;
+      }
 
-document.addEventListener("click", event => {
-   if (event.target.matches("#stopwatch-start")){
-      startStopwatch();
+   if(min > 9 ){
+      appendSeconds.innerHTML = min;
    }
+}
+
+stopwatchStart.addEventListener("click", function(){
+   interval = setInterval(start, 1000);
 })
 
-let timer = document.getElementById('stopwatch');
+stopwatchStop.addEventListener("click", function(){
+   clearInterval(interval);
+})
 
-let hr = 0;
-let min = 0;
-let sec = 0;
-let stoptime = true;
-
-function startStopwatch() {
-  if (stoptime == true) {
-        stoptime = false;
-        timerCycle();
-    }
-}
-
-function stopStopwatch() {
-  if (stoptime == false) {
-    stoptime = true;
-  }
-}
-
-function stopwatchCycle() {
-    if (stoptime == false) {
-    sec = parseInt(sec);
-    min = parseInt(min);
-    hr = parseInt(hr);
-
-    sec = sec + 1;
-
-    if (sec == 60) {
-      min = min + 1;
-      sec = 0;
-    }
-    if (min == 60) {
-      hr = hr + 1;
-      min = 0;
-      sec = 0;
-    }
-
-    if (sec < 10 || sec == 0) {
-      sec = '0' + sec;
-    }
-    if (min < 10 || min == 0) {
-      min = '0' + min;
-    }
-    if (hr < 10 || hr == 0) {
-      hr = '0' + hr;
-    }
-
-    timer.innerHTML = hr + ':' + min + ':' + sec;
-
-    setTimeout("stopwatchCycle()", 1000);
-  }
-}
-
-function resetStopwatch() {
-    timer.innerHTML = '00:00:00';
-}
+stopwatchReset.addEventListener("click", function(){
+   clearInterval(interval);
+   seconds = "00";
+   min = "00";
+   appendSeconds.innerHTML = seconds;
+   appendMinutes.innerHTML = min;
+})
