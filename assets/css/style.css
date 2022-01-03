@@ -1,18 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Lato&family=Maven+Pro:wght@500&family=Mukta&display=swap');
 body {
+    font-family: Maven Pro, sans-serif;
     padding: 0;
     margin: 0;
-    background-color: #fff;
+    background-color: #e2e2e2;
     flex-direction: column;
 }
 
 /* Header */
 
 header {
+    font-size: 200%;
     height: 150px;
-    color: black;
+    color: #0f044c;
     line-height: 100px;
     text-align: center;
 }
+ 
+/* Intro */
+
+.intro {
+    font-family: Maven Pro, sans-serif;
+    color: #0f044c;
+    font-size: 150%;
+}
+
  
 /* Slides */
 
@@ -20,13 +32,15 @@ header {
     display: flex;
     height: 300px;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 } 
 
 
 .slide {
     height: 300px;
     width: 400px;
+    padding-top: 10px;
+    object-fit: cover;
 }
 
 #slide1 {
@@ -44,16 +58,22 @@ header {
 
 
 .slide button {
+    font-family: Maven Pro, sans-serif;
     position: relative;
-    background: transparent;
-    border: 1px solid white;
-    color:white;
+    background: #e2e2e2;
+    border: 1px solid #e2e2e2;
+    color: #0f044c;
     width: 60%;
     font-size: 200%;
     border-radius: 10px;
     left: 20%;
-    vertical-align: middle;
     cursor: pointer;
+    transform: translateY(200%);
+}
+
+.slide button:hover{
+    color: #e2e2e2;
+    background-color: #0f044c;
 }
 /*Display exercises*/
 
@@ -67,29 +87,61 @@ header {
     list-style: none;
 }
 
+.slide a {
+    text-decoration: none;
+    color: #0f044c;
+}
+
+.slide a:hover {
+    color: #e2e2e2;
+}
+.list-header {
+    color: #0f044c;
+    font-family: Maven Pro, sans-serif;
+    font-size: 200%;
+}
 
 .exercise-list button {
+    color: #0f044c;
+    font-size: 150%;
+    font-family: Maven Pro, sans-serif;
     background-color: transparent;
     cursor: pointer;
     border: none;
 }
 
 .exercise-list button:hover {
-    border: 1px solid black;
+    border: 1px solid #0f044c;
+    background-color: #0f044c;
+    color: #e2e2e2;
     border-radius: 5px;
 }
 
+.chosen-list {
+    color: #0f044c;
+    font-family: Maven Pro, sans-serif;
+    font-size: 150%;
+}
 .random-btn {
+    color: #0f044c;
+    font-family: Maven Pro, sans-serif;
     background-color: transparent;
-    border: 1px solid black;
+    border: 1px solid #0f044c;
     font-size: 150%;
     padding: 10px;
     border-radius: 10px;
 }
 
+.random-btn:hover {
+    background-color: #0f044c;
+    color: #e2e2e2;
+}
+
 /* Stopwatch*/
 
 #stopwatch {
+    font-family: Maven Pro, sans-serif;
+    color: #0f044c;
     width:100%;
     height: 200px;
     text-align: center;
@@ -99,6 +151,8 @@ header {
 }
 
 #stopwatch-buttons {
+    color: #0f044c;
+    font-family: Maven Pro, sans-serif;
     list-style: none;
 }
 
@@ -108,18 +162,74 @@ header {
 }
 
 .list-btn button {
-    border: 1px solid black;
+    color: #0f044c;
+    font-family: Maven Pro, sans-serif;
+    border: 1px solid #0f044c;
     background-color: transparent;
     font-size: 200%;
     padding: 10px 25px;
     border-radius: 10px;
     cursor: pointer;
 }
+
+.list-btn button:hover {
+    color: #e2e2e2;
+    background-color: #0f044c;
+}
 /* Footer */
 
 .footer{
     height: 100px;
     width: 100%;
-    background-color: black;
+    background-color: #0f044c;
     margin-top: auto;
+    color: #e2e2e2;
+}
+
+.footer h3 {
+    text-align: center;
+}
+
+.footer ul {
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer li {
+    display: inline-block;
+}
+
+.footer a {
+    color: #e2e2e2;
+    font-size: 200%;
+    padding: 0 20px;
+}
+
+@media screen and (max-width:900px) {
+    header {
+        font-size: 100%;
+    }
+
+    .slide {
+        width: 300px;
+        height: 200px;
+    }
+
+    .intro {
+        font-size: 100%;
+    }
+
+    .list-btn button {
+        font-size: 100%;
+        padding: 10px;
+    }
+
+    .footer h3, a {
+        font-size: 100%;
+    }
+
+    .footer {
+        height: 150px;
+    }
 }

@@ -25,7 +25,7 @@ let timerButton = document.getElementById("timer-button")
  // function to create HTML syntax for a list from an array//
 
 function createList (arr) {
-        let exTable = `<h3>Choose an exercise routine!</h3> <ol class="exercise-list">`;
+        let exTable = `<h3 class="list-header">Choose an exercise routine!</h3> <ol class="exercise-list">`;
         for (let i = 0 ; i < arr.length; i++){
             if (arr === advanced){
                 let listItem = `<li><button id="adlist-item${i+1}">${arr[i][0]}</button></li>`;
@@ -50,9 +50,9 @@ function displayList(arr){
 
 // Create a list of the chosen exercise//
 function createExerciseList (arr,num){
-    let exerciseListTable = `<h3>You have Chosen ${arr[num][0]}! Good luck!</h3> <ol class="exercise-list">`;
+    let exerciseListTable = `<h3 class="list-header">You have Chosen ${arr[num][0]}! Good luck!</h3> <ol class="exercise-list">`;
         for (let i = 1 ; i < arr[num].length; i++){
-            let listItem = `<li >${arr[num][i]}</li>`;
+            let listItem = `<li class="chosen-list">${arr[num][i]}</li>`;
             exerciseListTable += listItem
         }
         exerciseListTable + "</ol>";
@@ -123,7 +123,7 @@ function randomChoice (){
 
     // add html with two buttons to choose between beginner and advanced//
 
-    let chooseLevel =`<h3>Do you want a Beginner or Advanced workout?</h3> <button id="random-beginner" class="random-btn">Beginner</button> <button id="random-advanced" class="random-btn">Advanced</button>`;
+    let chooseLevel =`<h3 class="list-header">Do you want a Beginner or Advanced workout?</h3> <button id="random-beginner" class="random-btn">Beginner</button> <button id="random-advanced" class="random-btn">Advanced</button>`;
     document.getElementById("display-exercise").innerHTML = chooseLevel;
 }
 
