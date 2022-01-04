@@ -15,6 +15,14 @@ header {
     color: #1a265b;
     line-height: 100px;
     text-align: center;
+    background: #c2d6d8;
+    background: linear-gradient(22deg,#c2d6d8 0%, #50a5af 80%);
+    background: -webkit-linear-gradient(22deg,#c2d6d8 0%, #50a5af 80%);
+    background: -moz-linear-gradient(22deg,#c2d6d8 0%, #50a5af 80%);
+}
+
+h1 {
+    margin-top: 0;
 }
  
 /* Intro */
@@ -118,8 +126,11 @@ header {
 }
 
 .chosen-list {
-    background-color: #50a5af;
-    color: #ffff;
+    background: #c2d6d8;
+    background: linear-gradient(334deg,#c2d6d8 0%, #50a5af 80%);
+    background: -webkit-linear-gradient(334deg,#c2d6d8 0%, #50a5af 80%);
+    background: -moz-linear-gradient(334deg,#c2d6d8 0%, #50a5af 80%);
+    color: #1a265b;
     font-family: Maven Pro, sans-serif;
     font-size: 150%;
 }
@@ -215,6 +226,10 @@ header {
     .slide {
         width: 300px;
         height: 200px;
+    }
+
+    .slide button {
+        font-size: 150%;
     }
 
     .intro {

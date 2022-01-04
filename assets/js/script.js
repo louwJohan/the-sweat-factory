@@ -169,7 +169,7 @@ function start(){
       }
 
    if(min > 9 ){
-      appendSeconds.innerHTML = min;
+      appendMinutes.innerHTML = min;
    }
 }
 
