@@ -174,7 +174,11 @@ function start(){
 }
 
 stopwatchStart.addEventListener("click", function(){
-   interval = setInterval(start, 1000);
+   if (seconds > 0 || min > 0){
+      // pass //  
+   }else {
+      interval = setInterval(start, 1000);
+   }
 })
 
 stopwatchStop.addEventListener("click", function(){

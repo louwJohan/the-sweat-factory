@@ -3,7 +3,7 @@ body {
     font-family: Maven Pro, sans-serif;
     padding: 0;
     margin: 0;
-    background-color: #e2e2e2;
+    background-color: #c2d6d8;
     flex-direction: column;
 }
 
@@ -12,7 +12,7 @@ body {
 header {
     font-size: 200%;
     height: 150px;
-    color: #0f044c;
+    color: #1a265b;
     line-height: 100px;
     text-align: center;
 }
@@ -21,7 +21,7 @@ header {
 
 .intro {
     font-family: Maven Pro, sans-serif;
-    color: #0f044c;
+    color: #1a265b;
     font-size: 150%;
 }
 
@@ -60,9 +60,9 @@ header {
 .slide button {
     font-family: Maven Pro, sans-serif;
     position: relative;
-    background: #e2e2e2;
-    border: 1px solid #e2e2e2;
-    color: #0f044c;
+    background: #c2d6d8;
+    border: 1px solid #c2d6d8;
+    color: #1a265b;
     width: 60%;
     font-size: 200%;
     border-radius: 10px;
@@ -72,8 +72,8 @@ header {
 }
 
 .slide button:hover{
-    color: #e2e2e2;
-    background-color: #0f044c;
+    color: #c2d6d8;
+    background-color: #f1610d;
 }
 /*Display exercises*/
 
@@ -89,20 +89,20 @@ header {
 
 .slide a {
     text-decoration: none;
-    color: #0f044c;
+    color: #1a265b;
 }
 
 .slide a:hover {
     color: #e2e2e2;
 }
 .list-header {
-    color: #0f044c;
+    color: #1a265b;
     font-family: Maven Pro, sans-serif;
     font-size: 200%;
 }
 
 .exercise-list button {
-    color: #0f044c;
+    color: #1a265b;
     font-size: 150%;
     font-family: Maven Pro, sans-serif;
     background-color: transparent;
@@ -111,37 +111,38 @@ header {
 }
 
 .exercise-list button:hover {
-    border: 1px solid #0f044c;
-    background-color: #0f044c;
-    color: #e2e2e2;
+    border: 1px solid #1a265b;
+    background-color: #f1610d;
+    color: #c2d6d8;
     border-radius: 5px;
 }
 
 .chosen-list {
-    color: #0f044c;
+    background-color: #50a5af;
+    color: #ffff;
     font-family: Maven Pro, sans-serif;
     font-size: 150%;
 }
 .random-btn {
-    color: #0f044c;
+    color: #1a265b;
     font-family: Maven Pro, sans-serif;
     background-color: transparent;
-    border: 1px solid #0f044c;
+    border: 1px solid #1a265b;
     font-size: 150%;
     padding: 10px;
     border-radius: 10px;
 }
 
 .random-btn:hover {
-    background-color: #0f044c;
-    color: #e2e2e2;
+    background-color: #f1610d;
+    color: #c2d6d8;
 }
 
 /* Stopwatch*/
 
 #stopwatch {
     font-family: Maven Pro, sans-serif;
-    color: #0f044c;
+    color: #1a265b;
     width:100%;
     height: 200px;
     text-align: center;
@@ -151,7 +152,7 @@ header {
 }
 
 #stopwatch-buttons {
-    color: #0f044c;
+    color: #1a265b;
     font-family: Maven Pro, sans-serif;
     list-style: none;
 }
@@ -162,9 +163,9 @@ header {
 }
 
 .list-btn button {
-    color: #0f044c;
+    color: #1a265b;
     font-family: Maven Pro, sans-serif;
-    border: 1px solid #0f044c;
+    border: 1px solid #1a265b;
     background-color: transparent;
     font-size: 200%;
     padding: 10px 25px;
@@ -173,8 +174,8 @@ header {
 }
 
 .list-btn button:hover {
-    color: #e2e2e2;
-    background-color: #0f044c;
+    color: #c2d6d8;
+    background-color: #f1610d;
 }
 /* Footer */
 
@@ -183,7 +184,7 @@ header {
     width: 100%;
     background-color: #0f044c;
     margin-top: auto;
-    color: #e2e2e2;
+    color: #c2d6d8;
 }
 
 .footer h3 {
@@ -201,7 +202,7 @@ header {
 }
 
 .footer a {
-    color: #e2e2e2;
+    color: #c2d6d8;
     font-size: 200%;
     padding: 0 20px;
 }
