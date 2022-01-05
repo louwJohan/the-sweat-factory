@@ -4,7 +4,6 @@ body {
     padding: 0;
     margin: 0;
     background-color: #c2d6d8;
-    flex-direction: column;
 }
 
 /* Header */
@@ -41,6 +40,8 @@ h1 {
     height: 300px;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    flex-direction: row;
+    gap: 10px;
 } 
 
 
@@ -71,7 +72,7 @@ h1 {
     background: #c2d6d8;
     border: 1px solid #c2d6d8;
     color: #1a265b;
-    width: 60%;
+    width: 200px;
     font-size: 200%;
     border-radius: 10px;
     left: 20%;
@@ -223,6 +224,10 @@ h1 {
         font-size: 100%;
     }
 
+    .slide-container{
+        gap: 5px;
+    }
+
     .slide {
         width: 300px;
         height: 200px;
@@ -230,10 +235,15 @@ h1 {
 
     .slide button {
         font-size: 150%;
-    }
+        width: 150px;
+       }
 
     .intro {
         font-size: 100%;
+    }
+
+    .list-header {
+        font-size: 150%;
     }
 
     .list-btn button {
@@ -249,3 +259,12 @@ h1 {
         height: 150px;
     }
 }
+
+@media  screen and  (max-width: 300px)
+{
+    .list-btn {
+        display: inline-block;
+        padding: 2px;
+    }
+}
+    
