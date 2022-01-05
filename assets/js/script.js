@@ -1,4 +1,4 @@
-let advanced = [
+const advanced = [
    ["THE GOOD THE BAD AND THE UGLY", "For Time", "200 Double-Unders", "1,500/1,250 meter Row", "30 Shoulder-to-Overheads (155/105 lb)",
        "100 Double-Unders", "1,000/800 meter Row", "20 Shoulder-to-Overheads (155/105 lb)", "50 Double-Unders", "500/400 meter Row",
        "10 Shoulder-to-Overheads (155/105 lb)", "With a running clock, complete the prescribed work in the order written as fast as possible (“For Time“)."
@@ -23,7 +23,7 @@ let advanced = [
    ["MOUNT KILIMANJARO", "For Time", "800 meter Run", "40 Box Step-Ups (30/24 in)", "600 meter Run", "30 Box Jump Overs (30/24 in)", "400 meter Run", "20 Box Step-Ups (30/24 in)", "200 meter Run", "10 Box Jump Overs (30/24 in)", "With a running clock, complete the prescribed work in the order written as fast as possible (“For Time“). "]
 ]
 
-let beginner = [
+const beginner = [
    ["THE GHOST", "3 rounds of:", "1 minute of rowing", "1 minute of burpees", "1 minute of jump rope", "1 minute of rest"],
    ["LIGHT LINDA", "15-12-9-6-3 reps for time of:", "Deadlift, 65/95", "Bench press, 45/65", "Squat clean, 35/45"],
    ["HALF CHELSEA", "Every minute on the minute for 10 minutes perform:",
@@ -38,10 +38,10 @@ let beginner = [
    ["NATE", "Complete as many rounds as possible in 20 minutes of:", "4 assisted pull-ups", "4 assisted dips", "4 assisted handstand push-ups", "8 kettlebell swings"]
 ]
 
-let advancedButton = document.getElementById("slide2-button");
-let beginnerButton = document.getElementById("slide1-button");
-let randomButton = document.getElementById("random-button");
-let timerButton = document.getElementById("timer-button")
+const advancedButton = document.getElementById("slide2-button");
+const beginnerButton = document.getElementById("slide1-button");
+const randomButton = document.getElementById("random-button");
+const timerButton = document.getElementById("timer-button")
 // function to create HTML syntax for a list from an array//
 
 function createList(arr) {
