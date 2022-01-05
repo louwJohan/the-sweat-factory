@@ -49,6 +49,7 @@ h1 {
     font-family: Maven Pro, sans-serif;
     color: #1a265b;
     font-size: 150%;
+    padding: 10px;
 }
 
  
@@ -88,24 +89,25 @@ h1 {
     flex-grow: 2;
 }
 
-.slide button {
+.slide a {
+    text-decoration: none;
     font-family: Maven Pro, sans-serif;
     position: absolute;
     background: #c2d6d8;
-    border: 1px solid #c2d6d8;
     color: #1a265b;
     width: 200px;
-    font-size: 200%;
+    border: 1px solid #1a265b;
     border-radius: 10px;
-    margin: 0;
+    font-size: 200%;
     position: absolute;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    padding-left: 35px;
 }
 
-.slide button:hover{
+.slide a:hover{
     color: #c2d6d8;
     background-color: #f1610d;
 }
@@ -121,14 +123,6 @@ h1 {
     list-style: none;
 }
 
-.slide a {
-    text-decoration: none;
-    color: #1a265b;
-}
-
-.slide a:hover {
-    color: #e2e2e2;
-}
 .list-header {
     color: #1a265b;
     font-family: Maven Pro, sans-serif;
@@ -145,7 +139,7 @@ h1 {
 }
 
 .exercise-list button:hover {
-    border: 1px solid #1a265b;
+    outline: 1px solid #1a265b;
     background-color: #f1610d;
     color: #c2d6d8;
     border-radius: 5px;
@@ -258,7 +252,7 @@ h1 {
         height: 200px;
     }
 
-    .slide button {
+    .slide a {
         font-size: 150%;
         width: 150px;
        }
