@@ -1,108 +1,93 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Sweat Factory
 
-Welcome Louw Johan Coetzee,
+![Preview of website an different formats](assets/images/amiresponsive.jpeg)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[Live Site](https://louwjohan.github.io/the-sweat-factory/)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+[Github Repository](https://github.com/louwJohan/the-sweat-factory)
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## About
 
-`python3 -m http.server`
+Staying fit and healthy make you better at life. You sleep better your mood is improved, you are more productive at work and the list goes on. Getting started with workout routines can be very intimidating and working out what to do can sometimes make you feel lost. 
 
-A blue button should appear to click: _Make Public_,
+We created The Sweat Factory to help with exercise routines. Mixing things up and and keeping it simple. From the diehard Crossfit Athletes to total beginners and everyone that wants to get fit and healthy. We supply the routines you supply the sweat.
 
-Another blue button should appear to click: _Open Browser_.
+## User Stories
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Starting a exercise routine can be daunting. What do you start with, how long must I do it etc, etc. We created The Sweat Factory to take care of all you routines. We have a lot of decisions to make every day and The Sweat Factory is here to help. 
 
-A blue button should appear to click: _Make Public_,
+### Who will visit the site?
 
-Another blue button should appear to click: _Open Browser_.
+1. The site caters for Crossfit Athletes that want a good workout. 
+2. Beginners who don't know where to start.
+3. Anyone who want to get into functional fitness this a good place to start.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Features
 
-To log into the Heroku toolbelt CLI:
+The website is easy to navigate and to understand. It features one page with a header and a short introduction. There are three slides with links to the various levels and also a random link if you cant decide.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+It has a stopwatch for you exercise below the list. There are also links to our various social media platforms if you want demo's of the various movements or if you want to connect to the community.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Header and Intro
 
-------
+![Header and Intro](assets/images/headerandintro.jpeg)
 
-## Release History
+The header has the websites name in a bos clearly displayed and below it is a short introduction of why you would use the site.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Slides
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+![Slides with links](assets/images/slides.jpeg)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+The slides contain three links. this helps with navigating on the page and displays a list of exercises. The Beginner button will display a list of beginner exercises.
+![Beginner List](assets/images/blist.jpeg)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+ Advanced will display an advanced list.
+ ![Advanced list](assets/images/alist.jpeg) 
+ 
+ If you cannot choose from the list, there is a random link. It will ask you what level you are at(Beginner or Advanced), and when you click on the level it will assign you an exercise at your chosen level.
+![Random list](assets/images/random.jpeg)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Exercise List and Stopwatch
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Once you have chosen or been assigned at random the exercise list will appear.
+It is displayed in a list where the first exercise appears at the top. Some of the routines have a time limit and others are for time(how fast can you perform the routine) We provided a stopwatch to keep time. It was placed under the list so you can keep track of the time and what exercise to perform next
+![List and stopwatch](assets/images/exlistandstopwatch.jpeg)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## Footer 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+The footer contains links to our social media pages for people to connect and for demo's of our exercises.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Technologies Used
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+1. HTML
+2. CSS
+3. Javascript
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## Testing
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+1. HTML - The HTML was passed through [HTML Validator](https://validator.w3.org/) and no errors were found.
+2. CSS - The CSS was passed through [Jigsaw](http://jigsaw.w3.org/css-validator/validator) no errors were found but displayed warnings.
+3. Javascript - was passed through [JSLint](https://www.jslint.com/) warnings were displayed lins of code in the lists are longer than 80 characters
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Accessibility 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+![Lighthouse score](assets/images/lighthouse.jpeg)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Unfixed Bugs
 
-------
+There are no unfixed bugs
 
-## FAQ about the uptime script
+## Deployment
 
-**Why have you added this script?**
+Github pages was used to deploy page. In the repository scroll down to the Github pages section. Select the main branch from the dropdown menu and select the root directory and save
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+## Credits
 
-**How will this affect me?**
+### Content
+- Stopwatch code was developed with the help of a youtube video  by Gowtham Tirri.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Media 
+- Photos were taken from Pexels.com
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!

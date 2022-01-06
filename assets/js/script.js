@@ -41,7 +41,7 @@ const beginner = [
 const advancedButton = document.getElementById("slide2-button");
 const beginnerButton = document.getElementById("slide1-button");
 const randomButton = document.getElementById("random-button");
-const timerButton = document.getElementById("timer-button")
+const timerButton = document.getElementById("timer-button");
 // function to create HTML syntax for a list from an array//
 
 function createList(arr) {
@@ -49,10 +49,10 @@ function createList(arr) {
    for (let i = 0; i < arr.length; i++) {
        if (arr === advanced) {
            let listItem = `<li><button id="adlist-item${i+1}">${arr[i][0]}</button></li>`;
-           exTable += listItem
+           exTable += listItem;
        } else {
            let listItem = `<li><button id="belist-item${i+1}">${arr[i][0]}</button></li>`;
-           exTable += listItem
+           exTable += listItem ;
        }
 
    }
@@ -73,7 +73,7 @@ function createExerciseList(arr, num) {
    let exerciseListTable = `<h3 class="list-header">You have Chosen ${arr[num][0]}! Good luck!</h3> <ol class="exercise-list">`;
    for (let i = 1; i < arr[num].length; i++) {
        let listItem = `<li class="chosen-list">${arr[num][i]}</li>`;
-       exerciseListTable += listItem
+       exerciseListTable += listItem ;
    }
    exerciseListTable + "</ol>";
    return exerciseListTable;
@@ -102,7 +102,7 @@ document.addEventListener("click", event => {
         if (event.target.matches(`#adlist-item${i}`)){
             displayChosenEx(advanced, i-1);
         } else if (event.target.matches(`#belist-item${i}`)){
-            displayChosenEx(beginner, i-1)
+            displayChosenEx(beginner, i-1);
         }
     }
    }
@@ -135,7 +135,7 @@ document.addEventListener("click", event => {
 // Stopwatch and countdown timer //
 
 // Stopwatch function // 
-let appendSeconds = document.getElementById("seconds")
+let appendSeconds = document.getElementById("seconds");
 let appendMinutes = document.getElementById("minutes");
 let seconds = 0;
 let min = 0;
