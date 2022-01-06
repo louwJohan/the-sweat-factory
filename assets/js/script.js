@@ -98,48 +98,15 @@ beginnerButton.addEventListener("click", function() {
 // Add event listener to help display the exercise routine //
 
 document.addEventListener("click", event => {
-   if (event.target.matches("#adlist-item1")) {
-       displayChosenEx(advanced, 0);
-   } else if (event.target.matches("#adlist-item2")) {
-       displayChosenEx(advanced, 1);
-   } else if (event.target.matches("#adlist-item3")) {
-       displayChosenEx(advanced, 2);
-   } else if (event.target.matches("#adlist-item4")) {
-       displayChosenEx(advanced, 3);
-   } else if (event.target.matches("#adlist-item5")) {
-       displayChosenEx(advanced, 4);
-   } else if (event.target.matches("#adlist-item6")) {
-       displayChosenEx(advanced, 5);
-   } else if (event.target.matches("#adlist-item7")) {
-       displayChosenEx(advanced, 6);
-   } else if (event.target.matches("#adlist-item8")) {
-       displayChosenEx(advanced, 7);
-   } else if (event.target.matches("#adlist-item9")) {
-       displayChosenEx(advanced, 8);
-   } else if (event.target.matches("#adlist-item10")) {
-       displayChosenEx(advanced, 9);
-   } else if (event.target.matches("#belist-item1")) {
-       displayChosenEx(beginner, 0);
-   } else if (event.target.matches("#belist-item2")) {
-       displayChosenEx(beginner, 1);
-   } else if (event.target.matches("#belist-item3")) {
-       displayChosenEx(beginner, 2);
-   } else if (event.target.matches("#belist-item4")) {
-       displayChosenEx(beginner, 3);
-   } else if (event.target.matches("#belist-item5")) {
-       displayChosenEx(beginner, 4);
-   } else if (event.target.matches("#belist-item6")) {
-       displayChosenEx(beginner, 5);
-   } else if (event.target.matches("#belist-item7")) {
-       displayChosenEx(beginner, 6);
-   } else if (event.target.matches("#belist-item8")) {
-       displayChosenEx(beginner, 7);
-   } else if (event.target.matches("#belist-item9")) {
-       displayChosenEx(beginner, 8);
-   } else if (event.target.matches("#belist-item10")) {
-       displayChosenEx(beginner, 9);
+    for (let i = 1; i<10; i++){
+        if (event.target.matches(`#adlist-item${i}`)){
+            displayChosenEx(advanced, i-1);
+        } else if (event.target.matches(`#belist-item${i}`)){
+            displayChosenEx(beginner, i-1)
+        }
+    }
    }
-})
+)
 
 // Random //
 
