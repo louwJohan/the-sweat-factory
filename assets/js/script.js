@@ -98,7 +98,7 @@ beginnerButton.addEventListener("click", function() {
 // Add event listener to help display the exercise routine //
 
 document.addEventListener("click", event => {
-    for (let i = 1; i<10; i++){
+    for (let i = 1; i<11; i++){
         if (event.target.matches(`#adlist-item${i}`)){
             displayChosenEx(advanced, i-1);
         } else if (event.target.matches(`#belist-item${i}`)){
