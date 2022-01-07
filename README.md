@@ -69,6 +69,10 @@ The footer contains links to our social media pages for people to connect and fo
 1. HTML - The HTML was passed through [HTML Validator](https://validator.w3.org/) and no errors were found.
 2. CSS - The CSS was passed through [Jigsaw](http://jigsaw.w3.org/css-validator/validator) no errors were found but displayed warnings.
 3. Javascript - was passed through [JSLint](https://www.jslint.com/) warnings were displayed lins of code in the lists are longer than 80 characters
+4. When first testing the website the stopwatch had a bug. When the start button was pressed the stopwatch started and when pressed again it would start again . I changed the code to add a "pass" if the values of the minutes or seconds were greater than zero.
+5. The website was tested on and Iphone SE , 8 ,with Google Chrome , Microsoft Edge, Firefox, Safari and on an Ipad. The website worked as expected.
+6. The links was tested on every button and the stopwatch was run to make sure it displays the correct time. The exercises work on "For time ", how fast the exercise can be performed or a time limit eg. 20 min , so there was no need for hour on the stopwatch.
+7. When testing the hover effect on the slide links the text would not change unless you hovered over the text. I added a anchor element inside a button. It was fixed by removing the button element in the HTML. 
 
 ## Accessibility 
 
@@ -80,7 +84,15 @@ There are no unfixed bugs
 
 ## Deployment
 
-Github pages was used to deploy page. In the repository scroll down to the Github pages section. Select the main branch from the dropdown menu and select the root directory and save
+Regular commits was made to save progress. When changes was made we typed in the following in bash the terminal
+1. git add . (adds all the changes)
+2. git commit -m "commit message" (commits the changes with a message)
+3. git push (pushes the changes to Github)
+
+Github pages was used to deploy page. 
+1. Log onto Github and go to repository.
+2. In the repository scroll down to the Github pages section. 
+3. Select the main branch from the dropdown menu and select the root directory and save
 
 ## Credits
 
