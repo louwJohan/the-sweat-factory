@@ -42,16 +42,24 @@ const advancedButton = document.getElementById("slide2-button");
 const beginnerButton = document.getElementById("slide1-button");
 const randomButton = document.getElementById("random-button");
 const timerButton = document.getElementById("timer-button");
-// function to create HTML syntax for a list from an array//
+
+/**Function creates HTML ordered list
+ * form elements in an array
+ */
 
 function createList(arr) {
-   let exTable = `<h3 class="list-header">Choose an exercise routine!</h3> <ol class="exercise-list">`;
+   let exTable = `<h3 class="list-header">Choose an exercise routine!</h3> 
+                  <ol class="exercise-list">`;
    for (let i = 0; i < arr.length; i++) {
        if (arr === advanced) {
-           let listItem = `<li><button id="adlist-item${i+1}">${arr[i][0]}</button></li>`;
+           let listItem = ` <li>
+                                <button id="adlist-item${i+1}">${arr[i][0]}</button>
+                            </li>`;
            exTable += listItem;
        } else {
-           let listItem = `<li><button id="belist-item${i+1}">${arr[i][0]}</button></li>`;
+           let listItem = `<li>
+                                 <button id="belist-item${i+1}">${arr[i][0]}</button>
+                           </li>`;
            exTable += listItem ;
        }
 
@@ -61,16 +69,22 @@ function createList(arr) {
 }
 
 
-//Function HTML syntax created from an  array and inserts into DOM //
+/**
+ * Function inserts HTML created by creatlist function
+ */
 
 function displayList(arr) {
    let exList = createList(arr);
    return document.getElementById("display-exercise").innerHTML = exList;
 }
 
-// Create a list of the chosen exercise//
+/**
+ * function creates HTML ol from arrays in array
+ */
+
 function createExerciseList(arr, num) {
-   let exerciseListTable = `<h3 class="list-header">You have Chosen ${arr[num][0]}! Good luck!</h3> <ol class="exercise-list">`;
+   let exerciseListTable = `<h3 class="list-header">You have Chosen ${arr[num][0]}! Good luck!</h3> 
+                            <ol class="exercise-list">`;
    for (let i = 1; i < arr[num].length; i++) {
        let listItem = `<li class="chosen-list">${arr[num][i]}</li>`;
        exerciseListTable += listItem ;
@@ -79,14 +93,19 @@ function createExerciseList(arr, num) {
    return exerciseListTable;
 }
 
-// function to insert Exercise list into DOM //
+/**
+ * Function inserts list created by createExerciseList
+ */
 
 function displayChosenEx(arr, num) {
    let exList = createExerciseList(arr, num);
    return document.getElementById("display-exercise").innerHTML = exList;
 }
 
-// event listeners to display list of exercises //
+/**
+ * event listeners for created list, calls function
+ */
+
 advancedButton.addEventListener("click", function() {
    displayList(advanced)
 });
@@ -95,7 +114,9 @@ beginnerButton.addEventListener("click", function() {
 });
 
 
-// Add event listener to help display the exercise routine //
+/**
+ * Event listener loop, checks which button was chosen
+ */
 
 document.addEventListener("click", event => {
     for (let i = 1; i<11; i++){
@@ -108,19 +129,28 @@ document.addEventListener("click", event => {
    }
 )
 
-// Random //
+/** 
+ * function to display 2 buttons for beginner or advanced
+ */
 
 function randomChoice() {
 
-   // add html with two buttons to choose between beginner and advanced//
-
-   let chooseLevel = `<h3 class="list-header">Do you want a Beginner or Advanced workout?</h3> <button id="random-beginner" class="random-btn">Beginner</button> <button id="random-advanced" class="random-btn">Advanced</button>`;
+   let chooseLevel = `<h3 class="list-header">Do you want a Beginner or Advanced workout?</h3> 
+                      <button id="random-beginner" class="random-btn">Beginner</button> 
+                      <button id="random-advanced" class="random-btn">Advanced</button>`;
    document.getElementById("display-exercise").innerHTML = chooseLevel;
 }
 
 randomButton.addEventListener("click", function() {
    randomChoice()
 });
+
+/**
+ * event listener function
+ * generate random number 
+ * display list from array 
+ * with index random number
+ */
 
 document.addEventListener("click", event => {
    if (event.target.matches("#random-beginner")) {
@@ -132,9 +162,11 @@ document.addEventListener("click", event => {
    }
 })
 
-// Stopwatch and countdown timer //
+/**
+ * Stopwatch
+ * declare variables 
+ */
 
-// Stopwatch function // 
 let appendSeconds = document.getElementById("seconds");
 let appendMinutes = document.getElementById("minutes");
 let seconds = 0;
@@ -143,6 +175,15 @@ let interval;
 let stopwatchStart = document.getElementById("stopwatch-start");
 let stopwatchStop = document.getElementById("stopwatch-stop");
 let stopwatchReset = document.getElementById("stopwatch-reset");
+
+/**
+ * Functions 
+ * increment seconds and minutes
+ * sets limit for seconds
+ * add 0 to single digits
+ * append DOM
+ * 
+ */
 
 function start() {
    seconds++;
@@ -166,6 +207,12 @@ function start() {
    }
 }
 
+/**
+ * Event listener 
+ * starts function 
+ * set interval
+ */
+
 stopwatchStart.addEventListener("click", function() {
    if (seconds > 0 || min > 0) {
        // pass //  
@@ -174,9 +221,19 @@ stopwatchStart.addEventListener("click", function() {
    }
 })
 
+/**
+ * Stop stopwatch
+ */
+
 stopwatchStop.addEventListener("click", function() {
    clearInterval(interval);
 })
+
+/**
+ * Reset stopwatch
+ * reset min and seconds
+ * append DOM
+ */
 
 stopwatchReset.addEventListener("click", function() {
    clearInterval(interval);

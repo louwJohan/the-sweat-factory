@@ -83,7 +83,7 @@ The footer contains links to our social media pages for people to connect and fo
 There are no unfixed bugs
 
 ## Deployment
-
+### Committing changes
 Regular commits was made to save progress. When changes was made we typed in the following in bash the terminal
 1. git add . (adds all the changes)
 2. git commit -m "commit message" (commits the changes with a message)
@@ -91,8 +91,21 @@ Regular commits was made to save progress. When changes was made we typed in the
 
 Github pages was used to deploy page. 
 1. Log onto Github and go to repository.
-2. In the repository scroll down to the Github pages section. 
-3. Select the main branch from the dropdown menu and select the root directory and save
+2. Clicked the "Settings" button in the menu above the Repository.
+3. In Settings scroll down to the Github pages section. 
+4. Select the main branch from the dropdown menu and select the root directory and save
+
+### Cloning
+#### Making a Local Clone
+
+1. Log into your GitHub then find the gitpod repository
+2. Under the repository name there is a button that says "Clone or download". Click on this button.
+3. If cloning with HTTPS "Clone with HTTPS", copy this link.
+4. Open Gitbash
+5. Change the current working directory to the location where you want the cloned directory to be.
+6. Type git clone, and then paste the URL you copied earlier.
+
+![clone example](assets/images/clone.jpeg)
 
 ## Credits
 
