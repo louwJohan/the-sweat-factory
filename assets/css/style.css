@@ -270,6 +270,10 @@ h1 {
         font-size: 150%;
     }
 
+    .exercise-list button {
+        font-size: 120%;
+    }
+
     .list-btn button {
         font-size: 100%;
         padding: 10px;
