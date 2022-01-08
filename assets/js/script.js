@@ -15,7 +15,7 @@ const advanced = [
    ["THE RUNNING DEAD", "For Time", "600 meter Run",
        "15 Kettlebell Devil Presses (2x70/53 lb)", "600 meter Run", "With a running clock, complete the prescribed work in the order written as fast as possible (“For Time“)."
    ],
-   ["OH MY SWEET LEGGINGS", "For Time", "20-16-12-8 calorie Row", "26 Pistols", "8-12-16-20 Overhead Squats (60/40 kg)",
+   ["OH MY SWEET LEGGINGS", "For Time", "20-16-12-8 calorie Row", "26 Pistols", "8-12-16-20 Overhead Squats (130/90 lb)",
        "With a running clock, complete the prescribed work in the order written as fast as possible (“For Time“). Athlete must complete 20 calorie Row, 26 Pistols, 8 Overhead Squats for the first round. For the second round, athlete will then perform 16 calorie Row, 26 Pistols, 12 Overhead Squats, etc.With a running clock, complete the prescribed work in the order written as fast as possible (“For Time“). Athlete must complete 20 calorie Row, 26 Pistols, 8 Overhead Squats for the first round. For the second round, athlete will then perform 16 calorie Row, 26 Pistols, 12 Overhead Squats, etc."
    ],
    ["12 DAYS OF DB CHRISTMAS", "For Time", "1 Dumbbell Turkish Get-Up (50/35 lb)", "2 Strict Toes-to-Bar", "3 Burpees Over the Dumbbell", "4 Dumbbell Power Snatches (alternating) (50/35 lb)", "5 Supermans", "6 Push-Ups", "7 Single Dumbbell Front Squats (50/35 lb)", "8 Single-Arm Dumbbell Hang Power Cleans (50/35 lb)", "9 Dumbbell Sumo Deadlifts (50/35 lb)", "10 Walking Lunge Steps (alternating)", "11 Strict Sit-Ups", "12 Dumbbell Swings (50/35lb)", "Start with 1 Turkish Get-Up (TGU). Then do 2 Strict Toes-to-Bar and 1 TGU. Then 3 Burpees Over the Dumbbell, 2 Strict Toes-to-Bar, and 1 TGU. Continue this way until the final round of 12 Dumbbell Swings, 11 Strict Sit-Ups, and each movement descending in repetitions all the way down to 1 TGU — for 364 repetitions total."],
@@ -25,7 +25,7 @@ const advanced = [
 
 const beginner = [
    ["THE GHOST", "3 rounds of:", "1 minute of rowing", "1 minute of burpees", "1 minute of jump rope", "1 minute of rest"],
-   ["LIGHT LINDA", "15-12-9-6-3 reps for time of:", "Deadlift, 65/95", "Bench press, 45/65", "Squat clean, 35/45"],
+   ["LIGHT LINDA", "15-12-9-6-3 reps for time of:", "Deadlift(65/95 lb)", "Bench press(45/65 lb)", "Squat clean(35/45 lb)"],
    ["HALF CHELSEA", "Every minute on the minute for 10 minutes perform:",
        "3 ring rows", "6 elevated push-ups", "9 squats", "If you fall behind the clock, keep going for 10 minutes and see how many rounds you can complete."
    ],
@@ -85,14 +85,17 @@ function displayList(arr) {
 function createExerciseList(arr, num) {
    let exerciseListTable = `<h3 class="list-header">You have Chosen ${arr[num][0]}! Good luck!</h3> 
                             <ol class="exercise-list">`;
-   for (let i = 1; i < arr[num].length; i++) {
-       let listItem = `<li class="chosen-list">${arr[num][i]}</li>`;
-       exerciseListTable += listItem ;
+    for (let i = 1; i < arr[num].length; i++) {
+        let listItem = `<li class="chosen-list">${arr[num][i]}</li>`;
+        exerciseListTable += listItem ;
    }
-   exerciseListTable + "</ol>";
+
+   exerciseListTable += `</ol>
+                        <p>"For Time" - Preform exercise as fast as possible.</p>
+                        <p>"Time Cap"- Perform exercise as many times in allotted time.</p>
+                        <p>Recommended weight is only a guide, feel free to scale up or down.</p>`;
    return exerciseListTable;
 }
-
 /**
  * Function inserts list created by createExerciseList
  */

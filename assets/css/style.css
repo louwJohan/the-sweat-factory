@@ -120,6 +120,9 @@ h1 {
     margin: 0 auto;
 }
 
+#display-exercise p {
+    color: #1a265b;
+}
 .exercise-list{
     list-style: none;
 }
@@ -271,7 +274,11 @@ h1 {
     }
 
     .exercise-list button {
-        font-size: 120%;
+        font-size: 110%;
+    }
+
+    .chosen-list{
+        font-size: 110%;
     }
 
     .list-btn button {
