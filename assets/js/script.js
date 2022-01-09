@@ -64,7 +64,7 @@ function createList(arr) {
        }
 
    }
-   exTable + `</ol>`;
+   exTable += `</ol>`;
    return exTable;
 }
 
