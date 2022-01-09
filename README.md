@@ -75,8 +75,9 @@ The footer contains links to our social media pages for people to connect and fo
 7. When testing the hover effect on the slide links the text would not change unless you hovered over the text. I added a anchor element inside a button. It was fixed by removing the button element in the HTML. 
 
 ## Accessibility 
+The website was tested with Lighthouse for accessibility, performance, best practice and search engine optimization and high scores were achieved in all catagories.
 
-![Lighthouse score](assets/images/lighthouse.jpeg)
+![Lighthouse score](assets/images/lighthouse1.jpeg)
 
 ## Unfixed Bugs
 
